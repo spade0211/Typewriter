@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <title>Aryan Mohakud</title>
+    <style>
+        body {
+            height: 100vh;
+            /* background-color: #03072a; */
+            background-color: white;
+            font-family: monospace;
+            font-size: 20px;
+            overflow: hidden;
+        }
+        
+        p {
+            font-size: 4vh;
+        }
+        
+        #title,
+        [class|=description],
+        .interlude,
+        [class|=skills],
+        [class|=skilld] {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .heading {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin-top: 20vh;
+            height: 50vh;
+        }
+        
+        #title {
+            color: black;
+            font-size: 7vh;
+        }
+        
+        [class|=description] {
+            position: relative;
+            color: black;
+            margin-block: 1vw;
+        }
+        
+        .interlude {
+            margin-block: 10vw;
+            margin-inline: 2vw;
+            font-size: 2vw;
+        }
+        
+        [class|=skilld] {
+            font-size: 1.5vw;
+            margin-block: 1rem;
+        }
+        
+        #title::after,
+        [class|=description]::after,
+        .interlude::after,
+        [class|=skills]::after,
+        [class|=skilld]::after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            right: 0;
+        }
+        
+        #title::after {
+            animation: mask-forward-1 steps(5) forwards 0.3s 2s, mask-forward-2 steps(19) forwards 0.7s 4s;
+        }
+        
+        .description-1::after {
+            animation: mask-forward-2 steps(77) forwards 2s 7.7s;
+        }
+        
+        .description-2::after {
+            animation: mask-forward-2 steps(77) forwards 2s 9.7s;
+        }
+        
+        .description-3::after {
+            animation: mask-forward-2 steps(77) forwards 2s 11.7s;
+        }
+        
+        .interlude::after {
+            animation: mask-forward-2 steps(77) forwards 2s 16.7s;
+        }
+        
+        .skills-1::after {
+            animation: mask-forward-2 steps(77) forwards 0.3s 24.7s;
+        }
+        
+        .skilld-1::after {
+            animation: mask-forward-2 steps(77) forwards 2.5s 27s;
+        }
+        
+        .skilld-2::after {
+            animation: mask-forward-2 steps(77) forwards 2.5s 29.5s;
+        }
+        
+        .skills-2::after {
+            animation: mask-forward-2 steps(77) forwards 0.3s 35s;
+        }
+        
+        .skilld-3::after {
+            animation: mask-forward-2 steps(77) forwards 2.7s 37.3s;
+        }
+        
+        .skilld-4::after {
+            animation: mask-forward-2 steps(77) forwards 2.5s 40s;
+        }
+        
+        .skilld-5::after {
+            animation: mask-forward-2 steps(77) forwards 2.5s 42.5s;
+        }
+        
+        #title::before,
+        [class|=description]::before,
+        .interlude::before,
+        [class|=skills]::before,
+        [class|=skilld]:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            width: 2px;
+            background-color: white;
+            position: absolute;
+            left: -2px;
+        }
+        
+        #title::before {
+            background-color: black;
+            animation: cursor-blink-2 steps(1) 2s backwards, cursor-forward-1 steps(5) forwards 0.3s 2s, cursor-blink-2 steps(1) 2s backwards 2.3s, cursor-forward-2 steps(19) forwards 0.7s 4s, cursor-blink steps(1) 3s none 4.7s, cursor-transparent steps(1) 0s forwards 7.7s;
+        }
+        
+        .description-1::before {
+            animation: cursor-white steps(1) 0s forwards 7.7s, cursor-forward-2 steps(77) forwards 2s 7.7s, cursor-transparent steps(1) 0s forwards 9.7s;
+        }
+        
+        .description-2::before {
+            animation: cursor-white steps(1) 0s forwards 9.7s, cursor-forward-2 steps(77) forwards 2s 9.7s, cursor-transparent steps(1) 0s forwards 11.7s;
+        }
+        
+        .description-3::before {
+            animation: cursor-white steps(1) 0s forwards 11.7s, cursor-forward-2 steps(77) 2s forwards 11.7s, cursor-blink steps(1) 3s backwards 13.7s, cursor-transparent steps(1) 0s forwards 16.7s;
+        }
+        
+        .interlude::before {
+            animation: cursor-white steps(1) 0s forwards 16.7s, cursor-forward-2 steps(77) 2s forwards 16.7s, cursor-blink steps(1) 3s backwards 18.7s, cursor-transparent 0s forwards 21.7s;
+        }
+        
+        .skills-1::before {
+            animation: cursor-white steps(1) 0s forwards 21.7s, cursor-blink steps(1) 3s backwards 21.7s, cursor-forward-2 steps(20) 0.3s forwards 24.7s, cursor-blink-2 2s forwards 25s, cursor-transparent 0s forwards 27s;
+        }
+        
+        .skilld-1::before {
+            animation: cursor-white steps(1) 0s forwards 27s, cursor-forward-2 steps(77) 2.5s forwards 27s, cursor-transparent 0s forwards 29.5s;
+        }
+        
+        .skilld-2::before {
+            animation: cursor-white steps(1) 0s forwards 29.5s, cursor-forward-2 steps(77) 2.5s forwards 29.5s, cursor-transparent 0s forwards 32s, cursor-blink steps(1) 3s backwards 32s;
+        }
+        
+        .skills-2::before {
+            animation: cursor-white steps(1) 0s forwards 35s, cursor-forward-2 steps(20) 0.3s forwards 35s, cursor-white steps(1) 0s forwards 35s, cursor-blink-2 2s forwards 35.3s, cursor-transparent 0s forwards 37.3s;
+        }
+        
+        .skilld-3::before {
+            animation: cursor-white steps(1) 0s forwards 37.3s, cursor-forward-2 steps(77) 2.7s forwards 37.3s, cursor-transparent 0s forwards 40s;
+        }
+        
+        .skilld-4::before {
+            animation: cursor-white steps(1) 0s forwards 40s, cursor-forward-2 steps(77) 2.5s forwards 40s, cursor-transparent 0s forwards 42.5s;
+        }
+        
+        .skilld-5::before {
+            animation: cursor-white steps(1) 0s forwards 42.5s, cursor-forward-2 steps(77) 2.5s forwards 42.5s, cursor-white steps(1) 0s forwards 42.5s, cursor-blink infinite 3s both 45s;
+            /* , cursor-transparent 0s forwards 45s */
+        }
+        
+        @keyframes mask-forward-1 {
+            to {
+                width: calc(100% - 22%);
+            }
+        }
+        
+        @keyframes mask-forward-2 {
+            to {
+                width: 0;
+            }
+        }
+        
+        @keyframes cursor-forward-1 {
+            to {
+                left: calc(22% - 2px);
+            }
+        }
+        
+        @keyframes cursor-forward-2 {
+            to {
+                left: calc(100% - 2px);
+            }
+        }
+        
+        @keyframes cursor-blink {
+            25% {
+                background-color: transparent;
+            }
+            50% {
+                background-color: black;
+            }
+            75% {
+                background-color: transparent;
+            }
+            100% {
+                background-color: black;
+            }
+        }
+        
+        @keyframes cursor-blink-2 {
+            37.5% {
+                background-color: transparent;
+            }
+            75% {
+                background-color: black;
+            }
+            100% {
+                background-color: transparent;
+            }
+        }
+        
+        @keyframes cursor-transparent {
+            100% {
+                background-color: transparent;
+            }
+        }
+        
+        @keyframes cursor-white {
+            100% {
+                background-color: black;
+            }
+        }
+        
+        @media (max-width: 990px) {
+            #title,
+            h1 {
+                font-size: 6vw;
+            }
+            [class|=description] {
+                font-size: 2.5vw;
+            }
+            p,
+            a {
+                font-size: 2vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading">
+        <h1 id="title">
+            Hey! I am Aryan Mohakud
+        </h1>
+        <p class="description-1">A budding Web Developer, currently working on developing</p>
+        <p class="description-2">frontend skills but plan on getting my hands dirty</p>
+        <p class="description-3">on backend development soon to become a full-stack developer.</p>
+    </div>
+    <p class="interlude">Now lets take a look at my current skillset shall we-</p>
+    <div class="skillset">
+        <h1>Skills-</h1>
+        <p class="skills-1">HTML and CSS</p>
+        <p class="skilld-1">A developed habit of writing semantic HTML and good practices, while ensuring proper accessibility</p>
+        <p class="skilld-2">Practiced responsive design, media queries, the Flexbox and Grid models by creating many static websites-</p>
+        <div class="projects">
+            <!-- <div class="project-1">
+                <img src="./images/desktop-design.jpg" alt="">
+            </div>
+            <div class="project-2">
+                <img src="./images/desktop-design 3.jpg" alt="">
+            </div>
+            <div class="project-3">
+                <img src="./images/desktop-design 2.jpg" alt="">
+            </div>
+            <div class="project-4">
+                <img src="./images/desktop-design 4.jpg" alt="">
+            </div> -->
+            <ol>
+                <li><a href="">Four-Card-Feature-Section</a></li>
+                <li><a href="">Profile-Card-Component-Main</a></li>
+                <li><a href="https://spade0211.github.io/social-proof-section-master/">Social-Proof-Section</a></li>
+                <li><a href="">Fylo-Data-Storage-Component</a></li>
+            </ol>
+        </div>
+        <p class="skills-2">Javascript</p>
+        <p class="skilld-3">An excellent understanding of basic to major concepts such as the DOM Manipulation, Functional Programming;</p>
+        <p class="skilld-4">Array Methods, Object Oriented Programming; Prototypal Inheritance, Asynchronous Javascript </p>
+        <p class="skilld-5">and the Fetch API / AJAX, Closures and even ES6+ features such as Iterators, Generators, Async/Await etc.</p>
+        <ol>
+            <li>
+                <a href="">Time Keeper</a>
+            </li>
+        </ol>
+    </div>
+
+</body>
+<script>
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+    setTimeout(() => {
+        window.scrollTo({
+            top: 879,
+            left: 0,
+            behavior: 'smooth'
+        });
+        document.body.style.overflow = "auto";
+    }, 21700);
+</script>
+
+</html>
