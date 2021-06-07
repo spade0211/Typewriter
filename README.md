@@ -2,10 +2,7 @@
 A small typewritten introduction to the great me
 Ok this was an interesting concept that caught my eye and wanted to implement it somehow, so kind of made this.
 
-```
-To view the website, visit the page:
-https://spade0211.github.io/Typewritter/
-```
+`To view the website, visit the page:` https://spade0211.github.io/Typewritter/
 
 # The Concept
 The main thing to do is to cover the text with `::after` and then reduce its size so that the letters *appear*
