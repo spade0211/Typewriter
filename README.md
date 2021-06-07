@@ -66,3 +66,10 @@ And its linked style.css file:
     }
 }
  ```
+
+By giving the `::after` an height and width of 100% along with `position absolute` and `display: inline-block`
+(keep in mind the parent element is given `position: relative`), 
+the pseudo element covers the whole text.
+Now the animation will run causing the text to slowly appear. The ~~ease~~ `steps(n)` helps in this _breaky_ animation
+
+The `::before` is used for the cursor, which is given a similar animation to the `::after` to make it seem like the letters are being typed from the cursor.
