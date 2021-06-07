@@ -1,10 +1,11 @@
 # Typewriter
-A small typewritting introduction to the great me
-
+A small typewriting introduction to the great me
 Ok this was an interesting concept that caught my eye and wanted to implement it somehow, so kind of made this.
 
+```
 To view the website, visit the page:
 https://spade0211.github.io/Typewritter/
+```
 
 # The Concept
 The main thing to do is to cover the text with `::after` and then reduce its size so that the letters *appear*
@@ -12,7 +13,7 @@ while the `::before` acts as the cursor which starts moving left as the size of 
 the content is being typed out.
 
 A simple html file:
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +30,7 @@ A simple html file:
 ```
 
 And its linked style.css file:
-```
+```css
 .text {
     position: relative;
     display: inline-block;
@@ -54,4 +55,14 @@ And its linked style.css file:
             left: -2px;
             animation: cursor-forward steps(11) forwards 2s;
         }
+@keyframes mask-forward {
+    to {
+        width: 0;
+    }
+}
+@keyframes cursor-forward {
+    to {
+        left: calc(22% - 2px);
+    }
+}
  ```
