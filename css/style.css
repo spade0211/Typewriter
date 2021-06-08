@@ -7,6 +7,8 @@ body {
     overflow: hidden;
 }
 
+a {}
+
 p {
     font-size: 4vh;
 }
@@ -14,6 +16,7 @@ p {
 #title,
 [class|=description],
 .interlude,
+.skills,
 [class|=skills],
 [class|=skilld] {
     position: relative;
@@ -53,6 +56,7 @@ p {
 #title::after,
 [class|=description]::after,
 .interlude::after,
+.skills::after,
 [class|=skills]::after,
 [class|=skilld]::after {
     content: '';
@@ -82,6 +86,10 @@ p {
 
 .interlude::after {
     animation: mask-forward-2 steps(77) forwards 2s 16.7s;
+}
+
+.skills::after {
+    animation: mask-forward-2 steps(77) forwards 0.3s 21.4;
 }
 
 .skills-1::after {
@@ -115,6 +123,7 @@ p {
 #title::before,
 [class|=description]::before,
 .interlude::before,
+.skills::before,
 [class|=skills]::before,
 [class|=skilld]:before {
     content: '';
@@ -145,6 +154,10 @@ p {
 
 .interlude::before {
     animation: cursor-white steps(1) 0s forwards 16.7s, cursor-forward-2 steps(77) 2s forwards 16.7s, cursor-blink steps(1) 3s backwards 18.7s, cursor-transparent 0s forwards 21.7s;
+}
+
+.skills ::before {
+    animation: cursor-white steps(1) 0s forwards 21.4s, cursor-forward-2 steps(77) 0.3s forwards 21.4s, cursor-transparent steps(1) 0s forwards 21.7s;
 }
 
 .skills-1::before {
