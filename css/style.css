@@ -7,7 +7,10 @@ body {
     overflow: hidden;
 }
 
-a {}
+a {
+    text-decoration: none;
+    font-family: monospace;
+}
 
 p {
     font-size: 4vh;
@@ -89,7 +92,7 @@ p {
 }
 
 .skills::after {
-    animation: mask-forward-2 steps(7) forwards 0.3s 21.4;
+    animation: mask-forward-2 steps(7) forwards 0.3s 21.4s;
 }
 
 .skills-1::after {
@@ -173,7 +176,7 @@ p {
 }
 
 .skills-2::before {
-    animation: cursor-white steps(1) 0s forwards 35s, cursor-forward-2 steps(20) 0.3s forwards 35s, cursor-white steps(1) 0s forwards 35s, cursor-blink-2 2s forwards 35.3s, cursor-transparent 0s forwards 37.3s;
+    animation: cursor-white steps(1) 0s forwards 35s, cursor-forward-2 steps(20) 0.3s forwards 35s, cursor-white steps(1) 0s forwards 35s, cursor-blink-2 steps(1) 2s forwards 35.3s, cursor-transparent 0s forwards 37.3s;
 }
 
 .skilld-3::before {
@@ -185,7 +188,7 @@ p {
 }
 
 .skilld-5::before {
-    animation: cursor-white steps(1) 0s forwards 42.5s, cursor-forward-2 steps(77) 2.5s forwards 42.5s, cursor-white steps(1) 0s forwards 42.5s, cursor-blink steps(1) infinite 3s both 45s;
+    animation: cursor-white steps(1) 0s forwards 42.5s, cursor-forward-2 steps(77) 2.5s forwards 42.5s, cursor-white steps(1) 0s forwards 42.5s, cursor-blink-2 steps(1) infinite 2s both 45s;
     /* , cursor-transparent 0s forwards 45s */
 }
 
