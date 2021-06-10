@@ -3,7 +3,7 @@ window.scrollTo({
     left: 0,
     behavior: 'smooth'
 });
-setTimeout(() => {
+skills = setTimeout(() => {
     window.scrollTo({
         top: 879,
         left: 0,
@@ -11,3 +11,9 @@ setTimeout(() => {
     });
     document.body.style.overflow = "auto";
 }, 21700);
+document.querySelector("button").addEventListener("click", () => {
+    document.querySelectorAll('p').forEach((i) => i.classList.add('skip'));
+    document.querySelectorAll('h1')[1].classList.add('skip');
+    clearTimeout(skills);
+    document.querySelector('body').style.overflow = 'auto';
+})
