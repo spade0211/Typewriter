@@ -398,11 +398,20 @@ h1.remove::before {
     h1 {
         font-size: 6vw;
     }
-    [class|=description] {
-        font-size: 2.5vw;
+    a {
+        margin-block: 5px;
     }
     p,
     a {
         font-size: 2vw;
+    }
+    [class|=description] {
+        font-size: 2.5vw;
+    }
+    [class|=skills] {
+        font-size: 3vw;
+    }
+    .skillset p {
+        margin-block: 0 !important;
     }
 }

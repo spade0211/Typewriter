@@ -23,3 +23,5 @@ document.querySelector("button").addEventListener("click", () => {
         document.querySelector('button').style.cursor = "inherit";
     }, 3000)
 })
+setTimeout(() =>
+    document.querySelector('button').classList.add('invis'), 45000)
