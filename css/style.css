@@ -6,7 +6,7 @@ body {
     height: 100vh;
     /* background-color: #03072a; */
     background-color: white;
-    font-family: monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 20px;
     overflow: hidden;
 }
@@ -22,7 +22,7 @@ p {
 }
 
 
-/* -----------------------------------------------------dont-ask------------------------------------------------- */
+/* -----------------------------------------------------dont ask start------------------------------------------------- */
 
 .button {
     position: fixed;
@@ -52,7 +52,7 @@ p {
 
 .button:hover .icon .fas,
 .button.success .icon .fas {
-    font-size: 33px;
+    font-size: 30px;
 }
 
 .button.success {
@@ -120,7 +120,7 @@ p {
 }
 
 
-/* ----------------------------------------------------------dont ask----------------------------------------------- */
+/* ----------------------------------------------------------dont ask end----------------------------------------------- */
 
 .invis {
     animation: dissapear 1s forwards;
@@ -153,12 +153,17 @@ p {
     position: relative;
     color: black;
     margin-block: 1vw;
+    font-weight: 400;
 }
 
 .interlude {
     margin-block: 10vw;
     margin-inline: 2vw;
     font-size: 2vw;
+}
+
+[class|=skills] {
+    font-weight: 500;
 }
 
 [class|=skilld] {
@@ -289,7 +294,7 @@ h1.remove::after {
 }
 
 .skills-1::before {
-    animation: cursor-white steps(1) 0s forwards 21.7s, cursor-blink steps(1) 3s backwards 21.7s, cursor-forward-2 steps(20) 0.3s forwards 24.7s, cursor-blink-2 2s forwards 25s, cursor-transparent 0s forwards 27s;
+    animation: cursor-white steps(1) 0s forwards 21.7s, cursor-blink steps(1) 3s backwards 21.7s, cursor-forward-2 steps(20) 0.3s forwards 24.7s, cursor-blink-2 steps(1) 2s forwards 25s, cursor-transparent 0s forwards 27s;
 }
 
 .skilld-1::before {
