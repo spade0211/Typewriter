@@ -307,7 +307,7 @@ h1.remove::after {
 }
 
 .skilld-2::before {
-    animation: cursor-white steps(1) 0s forwards 29.5s, cursor-forward-2 steps(77) 2.5s forwards 29.5s, cursor-transparent 0s forwards 32s, cursor-blink steps(1) 3s backwards 32s;
+    animation: cursor-white steps(1) 0s forwards 29.5s, cursor-forward-2 steps(77) 2.5s forwards 29.5s, cursor-white 0s forwards 32s, cursor-blink steps(1) 3s backwards 32s, cursor-transparent 0s forwards 35s;
 }
 
 .skills-2::before {
