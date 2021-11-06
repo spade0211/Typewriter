@@ -70,3 +70,6 @@ the pseudo element covers the whole text.
 Now the animation will run causing the text to slowly appear. The ~~ease~~ `steps(n)` helps in this _breaky_ animation
 
 The `::before` is used for the cursor, which is given a similar animation to the `::after` to make it seem like the letters are being typed from the cursor.
+
+# Afterthought
+Ok after trying another approach to this effect, turns out this is really inefficient. When done using javascript where you are actually removing and adding characters and not hiding them, the result is much more responsive and easy to handle.
